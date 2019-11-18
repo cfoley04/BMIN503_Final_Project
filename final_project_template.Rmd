@@ -95,7 +95,7 @@ HCCseq_ISG.RS <- HCCseq_ISG.RS[,-1]
 
 #Filter data set down to 176 genes in IFNG responsive signature
 HCCseq_IFNG.GS <- HCCseq_hgnc[as.numeric(na.omit(match(IFNG.GS, HCCseq_hgnc$hgnc_symbol))), 1:(ncol(HCCseq_hgnc)-1)]
-#Remove ensmbl and hgnc columns. make rownames hgnc symbol
+#Remove ensmbl and hgnc columns. make rownames hgnc symbol.
 HCCseq_IFNG.GS <- HCCseq_IFNG.GS[,-1]
 ```
 
