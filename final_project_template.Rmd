@@ -99,6 +99,13 @@ HCCseq_IFNG.GS <- HCCseq_hgnc[as.numeric(na.omit(match(IFNG.GS, HCCseq_hgnc$hgnc
 HCCseq_IFNG.GS <- HCCseq_IFNG.GS[,-1]
 ```
 
+Check with SNP in type III interferon (IL28) which generates either IFNL4 or psuedogene has variable expression and might predict IL28 SNP status
+
+```{r}
+lambda <- filter(HCCseq_hgnc, HCCseq_hgnc$hgnc_symbol == "IFNL4")
+quantile(lambda)
+```
+
 
 ### Results
 Describe your results and include relevant tables, plots, and code/comments used to obtain them. End with a brief conclusion of your findings related to the question you set out to address. You can include references if you'd like, but this is not required.
